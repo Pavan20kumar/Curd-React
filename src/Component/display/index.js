@@ -7,7 +7,7 @@ import { Link,useParams, useNavigate } from 'react-router-dom';
 function Display(){
     const [data,setData] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:4000/").then((res)=>{
+        axios.get("https://curd-backed-mysql.onrender.com").then((res)=>{
             setData(res.data);
         })
     },[])
