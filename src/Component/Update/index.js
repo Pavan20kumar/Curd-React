@@ -21,7 +21,7 @@ function Update(){
     function handleSubmite(event){
         event.preventDefault();
 
-        axios.put(`http://localhost:4000/Update/${id}`,{FirstName, LastName, Age, PhNum, Email})
+        axios.put(`https://curd-backed-mysql.onrender.com/Update/${id}`,{FirstName, LastName, Age, PhNum, Email})
         .then(res =>{
             Navigate('/')
             console.log(res.data);
