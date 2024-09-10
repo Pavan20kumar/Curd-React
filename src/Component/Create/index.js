@@ -18,7 +18,7 @@ function Create(){
     function handleSubmite(event){
         event.preventDefault();
 
-        axios.post('http://localhost:4000/Create',{FirstName, LastName, Age, PhNum, Email})
+        axios.post('https://curd-backed-mysql.onrender.com/Create',{FirstName, LastName, Age, PhNum, Email})
         .then(res =>{
             
             Navigate('/')
