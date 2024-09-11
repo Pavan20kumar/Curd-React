@@ -18,7 +18,7 @@ function Display(){
 
    const handlDeletle = (id)=>{
     
-    axios.delete(`https://curd-backed-mysql.onrender.com//Delete/${id}`).then((res)=>{
+    axios.delete(`https://curd-backed-mysql.onrender.com/Delete/${id}`).then((res)=>{
         console.log(res);
         window.location.reload();
         navigate('/');
