@@ -7,7 +7,7 @@ import { Link,useParams, useNavigate } from 'react-router-dom';
 function Display(){
     const [data,setData] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:4000/").then((res)=>{
+        axios.get("https://curd-backed-mysql.onrender.com/").then((res)=>{
             setData(res.data);
         })
     },[])
@@ -18,7 +18,7 @@ function Display(){
 
    const handlDeletle = (id)=>{
     
-    axios.delete(`http://localhost:4000/Delete/${id}`).then((res)=>{
+    axios.delete(`https://curd-backed-mysql.onrender.com//Delete/${id}`).then((res)=>{
         console.log(res);
         window.location.reload();
         navigate('/');
