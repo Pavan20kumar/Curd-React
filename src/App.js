@@ -13,6 +13,7 @@ import React from 'react';
 import Display from './Component/display/index.js';
 import Create from './Component/Create/index.js';
 import Update from './Component/Update/index.js';
+import View from './Component/View/index.js';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/'  element={<Display/>}/>
         <Route exact path='/Create'  element={<Create/>}/>
         <Route exact path='/Update/:id'  element={<Update/>}/>
+        <Route exact path='/View/:id'  element={<View/>}/>
       </Routes>
       </BrowserRouter>
      
