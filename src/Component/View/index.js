@@ -7,7 +7,7 @@ function View(){
     const [data,setData] = useState([]);
     const {id} = useParams();
     useEffect(()=>{
-        axios.get(`http://localhost:4000/View/${id}`).then((res)=>{
+        axios.get(`https://curd-backed-mysql.onrender.com/View/${id}`).then((res)=>{
             setData(res.data);
         })
     },[id])
@@ -17,7 +17,7 @@ function View(){
 
     const handlDeletle = (id)=>{
     
-        axios.delete(`http://localhost:4000/Delete/${id}`).then((res)=>{
+        axios.delete(`https://curd-backed-mysql.onrender.com/Delete/${id}`).then((res)=>{
             console.log(res);
             window.location.reload();
             navigate('/');
@@ -78,7 +78,7 @@ function View(){
                                     <td>{user['Email']}</td>
                                     <td >
                                         <button onClick={e => handlDeletle(user.id)} className='btn btn-danger'>Delete</button>
-                                        <Link to={`View/Update/${user.id}`} className='btn btn-success ms-2'>Update</Link>
+                                        
                                         
                                         
                                         
